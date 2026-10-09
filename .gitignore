@@ -1,1 +1,31 @@
+# Rust
+/target
+
+# REIMU build configuration
+/.xmake/
+
+# ANTLR
+.antlr
+
+# Python test runner
+__pycache__/
+
+# Local files
+dev/
+*.local.*
+
 .vscode
+.gitignore
+
+.github
+build
+template
+temp
+docs
+
+include/AstPrint.hpp
+src/AstPrint.cpp
+
+include/Semantic.hpp
+src/Semantic.cpp
+src/main.cpp

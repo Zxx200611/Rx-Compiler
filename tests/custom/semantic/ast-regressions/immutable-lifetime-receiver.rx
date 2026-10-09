@@ -1,0 +1,8 @@
+struct Counter { x: i32 }
+impl Counter {
+    fn update<'a>(&'a mut self) { self.x = 4; }
+}
+fn main() {
+    let c = Counter { x: 3 };
+    c.update();
+}

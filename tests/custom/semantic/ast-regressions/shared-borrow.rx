@@ -1,0 +1,7 @@
+fn main() {
+    let mut x = 3;
+    let r: &&mut i32 = &(&mut x);
+    println_i32(**r);
+    let outer: &i32 = &{ let p = &mut x; *p };
+    println_i32(*outer);
+}

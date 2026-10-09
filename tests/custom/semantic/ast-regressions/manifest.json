@@ -1,0 +1,10 @@
+[
+  { "source": "nested-reference.rx", "stage": "semantic", "compilation_success": true,
+    "description": "Nested mutable reference types preserve shared outer layers." },
+  { "source": "shared-borrow.rx", "stage": "semantic", "compilation_success": true,
+    "description": "An inner mutable borrow does not change the outer shared borrow." },
+  { "source": "lifetime-receiver.rx", "stage": "semantic", "compilation_success": true,
+    "description": "A receiver lifetime does not hide its mutable reference marker." },
+  { "source": "immutable-lifetime-receiver.rx", "stage": "semantic", "compilation_success": false,
+    "description": "A mutable receiver with an explicit lifetime still requires mutable access." }
+]

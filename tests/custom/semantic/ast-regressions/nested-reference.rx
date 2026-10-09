@@ -1,0 +1,8 @@
+fn read(value: &&mut i32) -> i32 { **value }
+fn explicit(value: & &mut i32) -> i32 { **value }
+fn main() {
+    let mut x = 3;
+    let r = &mut x;
+    println_i32(read(&r));
+    println_i32(explicit(&r));
+}
