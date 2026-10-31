@@ -26,6 +26,4 @@ docs
 include/AstPrint.hpp
 src/AstPrint.cpp
 
-include/Semantic.hpp
-src/Semantic.cpp
-src/main.cpp
+template

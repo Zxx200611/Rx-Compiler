@@ -80,7 +80,7 @@ std::vector<antlr4::tree::ParseTree*> ruleChildren(antlr4::tree::ParseTree* tree
     }
     return result;
 }
-// 判断一个string是否是结点的儿子
+// 判断一个结点是否是给定规则
 bool isRule(const antlr4::tree::ParseTree* tree, const std::string& name,
             const rxantlr::RxParser& parser) {
     const auto* ctx = dynamic_cast<const antlr4::ParserRuleContext*>(tree);
