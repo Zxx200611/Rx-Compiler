@@ -3,11 +3,11 @@
 # Optional: build your compiler once before testing. Leave empty if prebuilt.
 # {runtime} will be linked into every program.
 # Write shared runtime assembly there if your IR/CODEGEN output references it.
-BUILD = cmake -S . -B build/compiler -G Ninja -DCMAKE_BUILD_TYPE=Release && \
-    cmake --build build/compiler --parallel 4 && : > {runtime}
+BUILD = cmake -S . -B build/oj -DCMAKE_BUILD_TYPE=Release && \
+    cmake --build build/oj --parallel 4 && : > {runtime}
 
 # Required for semantic tests: exit 0 to accept {source}, 1 to reject it.
-SEMANTIC = ./build/compiler/rx-compiler {source}
+SEMANTIC = ./build/oj/rx-compiler {source}
 
 # Required for IR tests: write RV32 LLVM IR to {output} (.ll).
 IR = RUST_MIN_STACK=16777216 RX_SOURCE={source} $(REFERENCE_RUSTC) --crate-type=staticlib \
